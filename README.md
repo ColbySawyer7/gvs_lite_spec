@@ -163,20 +163,3 @@
     }
 </details>
 
-### Database Example without Encapsulation
-
-| instance_id     | owner (uid) | object            | editable  | state  | last update (unix timestamp)|
-|:--------------: |--------|------------------------|-----------|--------| ------------|
-| hQCgymmGn1g=    |  colby |  Server{id: 1, children:[QyE3mtUwsrM=]}         |  false    | active | 1672952148  |
-| QyE3mtUwsrM=    |  colby |  Composite{id: 1, children: [1z4mjTzXon4=]}      |  false    | active | 1672952148  |
-| YqgMh+K+bE4=    |  colby |  VM{id: 1}             |  false    | active | 1672952148  |
-| ZaLfxYqXj7o=    |  colby |  VM{id: 2}             |  false    | active | 1672952148  |
-| 1z4mjTzXon4=    |  colby |  VC{id: 1, children: [YqgMh+K+bE4=,ZaLfxYqXj7o=]}             |  false    | active | 1672952148  |
-
-
-### Database Example with Encapsulation
-
-| instance_id     | owner (uid) | object     | editable  | state  | last update (unix timestamp)|
-|:--------------: |--------|-------------    |-----------|--------| ------------|
-| YqgMh+K+bE4=    |  colby |  Server{id:1, children: [Composite{id:1}]}  |  false    | active | 1672952148  |
-| hQCgymmGn1g=    |  colby |  Composite{id:1, children: [VM{id:1}, VM{id:2}, VC{id:1}]}  |  false    | active | 1672952148  |
